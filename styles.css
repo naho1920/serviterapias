@@ -470,8 +470,8 @@ details.faq summary:hover { background: var(--color-bg-light); }
 @keyframes v2kb { from { transform: scale(1); } to { transform: scale(1.08); } }
 @keyframes v2mq { to { transform: translateX(-50%); } }
 
-.v2-bg { min-height: 100vh; padding: clamp(10px, 2vw, 26px); background: linear-gradient(155deg, #d9e7f2 0%, #eef5fa 48%, #dceeed 100%); }
-.v2-sheet { max-width: 1380px; margin: 0 auto; background: #fff; border-radius: 26px; overflow: hidden; box-shadow: 0 30px 90px rgba(18,58,99,.18); }
+.v2-bg { min-height: 100vh; background: #fff; }
+.v2-sheet { background: #fff; overflow: hidden; }
 .v2-pad { padding-left: clamp(16px, 3vw, 40px); padding-right: clamp(16px, 3vw, 40px); }
 .v2-up { animation: v2up .9s cubic-bezier(.2, .7, .2, 1) both; }
 @supports (animation-timeline: view()) {
@@ -639,17 +639,4 @@ details.faq summary:hover { background: var(--color-bg-light); }
   .v2-steps { grid-template-columns: 1fr; }
   .v2-svc-grid { grid-template-columns: 1fr; }
   .v2-cta { padding: 64px 22px; }
-}
-
-@media (min-width: 1440px) {
-  .v2-bg {
-    background: #fff;
-    padding: 0;
-    min-height: 100vh;
-  }
-  .v2-sheet {
-    max-width: 100%;
-    border-radius: 0;
-    box-shadow: none;
-  }
 }
