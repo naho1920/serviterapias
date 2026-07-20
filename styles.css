@@ -644,71 +644,70 @@ details.faq summary:hover { background: var(--color-bg-light); }
 /* ── Pantallas grandes (≥ 1440px) ── */
 @media (min-width: 1440px) {
 
-  /* Espacio lateral proporcional — todas las páginas */
-  .wrap {
-    max-width: none;
-    padding: 0 7vw;
-  }
-  .sec { padding: clamp(88px, 8vh, 140px) 0; }
-  .v2-pad {
-    padding-left: 7vw;
-    padding-right: 7vw;
-  }
+  /* Espaciado lateral proporcional — todas las páginas */
+  .wrap        { max-width: none; padding: 0 7vw; }
+  .v2-pad      { padding-left: 7vw; padding-right: 7vw; }
+  .sec         { padding: clamp(88px, 8vh, 140px) 0; }
 
-  /* Nav */
-  .v2-nav { padding-top: 26px; padding-bottom: 22px; }
+  /* Navbar */
+  .v2-nav      { padding-top: 28px; padding-bottom: 24px; }
+  .v2-links a  { font-size: 1rem; padding: 10px 20px; }
+  .v2-cta-pill { font-size: 1rem; padding: 13px 28px; }
+  .nav-logo img,
+  .v2-nav img[alt*="Serviterapias"] { height: 48px !important; }
 
   /* Hero principal */
-  .v2-hero {
-    min-height: clamp(580px, 65vh, 1000px);
-  }
-  /* Hero interior (otras páginas) */
-  .v2-hero--sm {
-    min-height: clamp(420px, 52vh, 720px);
-  }
+  .v2-hero          { min-height: clamp(580px, 64vh, 920px); }
+  .v2-hero-c        { max-width: clamp(800px, 52vw, 1100px); gap: 28px; }
+  .v2-hero h1       { font-size: clamp(2.8rem, 3.2vw, 4.8rem); }
+  .v2-hsub          { font-size: clamp(1.05rem, 1.15vw, 1.4rem); max-width: 640px; }
+  .v2-hbtn          { font-size: 1rem; padding: 18px 40px; }
 
-  /* Tipografía — escala con el viewport sin techo fijo */
-  body { font-size: clamp(1rem, 0.9vw, 1.2rem); }
+  /* Hero interior */
+  .v2-hero--sm      { min-height: clamp(420px, 48vh, 650px); }
+  .v2-hero--sm h1   { font-size: clamp(2.2rem, 2.8vw, 4rem); }
 
-  .v2-hero h1       { font-size: clamp(3rem,   4.8vw, 7rem); }
-  .v2-hero--sm h1   { font-size: clamp(2.4rem, 3.8vw, 5.5rem); }
-  .v2-hsub          { font-size: clamp(1.05rem, 1.2vw, 1.5rem); }
-
-  .sec-h            { font-size: clamp(2rem,   2.8vw, 4rem); }
-  .feat-h           { font-size: clamp(1.8rem, 2.4vw, 3.2rem); }
-  .v2-h2t           { font-size: clamp(1.8rem, 2.4vw, 3.2rem); }
-  .v2-lead          { font-size: clamp(1.2rem, 1.5vw, 2rem); }
-  .v2-big           { font-size: clamp(4rem,   5vw,   7.5rem); }
-  .v2-cd h3         { font-size: clamp(1.5rem, 2vw,   2.6rem); }
-
-  .inner-hero h1    { font-size: clamp(2.2rem, 3.5vw, 4.8rem); }
-  .inner-hero p     { font-size: clamp(1rem,   1.1vw, 1.4rem); max-width: 720px; }
-
-  .svc-card h3      { font-size: clamp(1rem,   1.1vw, 1.3rem); }
-  .svc-card p       { font-size: clamp(.85rem, 0.9vw, 1.05rem); }
-  .blog-h           { font-size: clamp(1.05rem,1.1vw, 1.35rem); }
-  .hero-h1          { font-size: clamp(2.8rem, 4.5vw, 6rem); }
+  /* Secciones */
+  body              { font-size: clamp(1rem, 0.85vw, 1.15rem); }
+  .sec-h            { font-size: clamp(2rem,   2.4vw, 3.4rem); }
+  .feat-h, .v2-h2t  { font-size: clamp(1.8rem, 2.1vw, 3rem); }
+  .v2-lead          { font-size: clamp(1.2rem, 1.4vw, 1.8rem); }
+  .v2-big           { font-size: clamp(4rem,   4.5vw, 6.5rem); }
+  .v2-cd h3         { font-size: clamp(1.4rem, 1.7vw, 2.2rem); }
+  .inner-hero h1    { font-size: clamp(2.2rem, 2.8vw, 4rem); }
+  .inner-hero p     { font-size: clamp(1rem, 1.05vw, 1.3rem); max-width: 680px; }
+  .svc-card h3      { font-size: clamp(1rem, 1.05vw, 1.25rem); }
+  .svc-card p       { font-size: clamp(.88rem, 0.88vw, 1.05rem); }
+  .blog-h           { font-size: clamp(1.05rem, 1.05vw, 1.3rem); }
+  .hero-h1          { font-size: clamp(2.8rem, 3.5vw, 5rem); }
 }
 
 /* ── Monitores muy grandes (≥ 1920px) ── */
 @media (min-width: 1920px) {
 
-  .wrap  { padding: 0 8vw; }
-  .v2-pad {
-    padding-left: 8vw;
-    padding-right: 8vw;
-  }
+  .wrap    { padding: 0 8vw; }
+  .v2-pad  { padding-left: 8vw; padding-right: 8vw; }
 
-  .v2-hero    { min-height: clamp(700px, 68vh, 1100px); }
-  .v2-hero--sm { min-height: clamp(500px, 55vh, 800px); }
+  /* Navbar */
+  .v2-links a  { font-size: 1.1rem; padding: 11px 22px; }
+  .v2-cta-pill { font-size: 1.1rem; padding: 15px 32px; }
+  .nav-logo img,
+  .v2-nav img[alt*="Serviterapias"] { height: 56px !important; }
 
-  body          { font-size: clamp(1.05rem, 0.85vw, 1.3rem); }
-  .v2-hero h1   { font-size: clamp(3.5rem, 5vw,   8rem); }
-  .v2-hsub      { font-size: clamp(1.1rem,  1.3vw, 1.7rem); }
-  .sec-h        { font-size: clamp(2.4rem,  3vw,   4.8rem); }
-  .feat-h,
-  .v2-h2t       { font-size: clamp(2rem,    2.6vw, 3.8rem); }
-  .v2-lead      { font-size: clamp(1.3rem,  1.6vw, 2.3rem); }
-  .v2-big       { font-size: clamp(5rem,    5.5vw, 9rem); }
-  .inner-hero h1 { font-size: clamp(2.6rem, 3.8vw, 5.5rem); }
+  /* Hero */
+  .v2-hero          { min-height: clamp(660px, 66vh, 1000px); }
+  .v2-hero-c        { max-width: clamp(900px, 50vw, 1200px); }
+  .v2-hero h1       { font-size: clamp(3rem, 3.4vw, 5.2rem); }
+  .v2-hsub          { font-size: clamp(1.1rem, 1.2vw, 1.5rem); max-width: 720px; }
+  .v2-hbtn          { font-size: 1.1rem; padding: 20px 46px; }
+  .v2-hero--sm      { min-height: clamp(480px, 52vh, 700px); }
+  .v2-hero--sm h1   { font-size: clamp(2.4rem, 3vw, 4.4rem); }
+
+  /* Secciones */
+  body              { font-size: clamp(1.05rem, 0.9vw, 1.2rem); }
+  .sec-h            { font-size: clamp(2.2rem, 2.6vw, 3.8rem); }
+  .feat-h, .v2-h2t  { font-size: clamp(2rem,   2.3vw, 3.4rem); }
+  .v2-lead          { font-size: clamp(1.3rem,  1.5vw, 2rem); }
+  .v2-big           { font-size: clamp(4.5rem,  5vw,   7.5rem); }
+  .inner-hero h1    { font-size: clamp(2.4rem,  3vw,   4.4rem); }
 }
