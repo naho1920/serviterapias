@@ -24,7 +24,7 @@
   --sh2: 0 10px 40px rgba(18,58,99,.14);
   --sh3: 0 24px 64px rgba(18,58,99,.18);
   --t:  .22s ease;
-  --mw: 1180px;
+  --mw: 1440px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -38,7 +38,7 @@ button { font-family: var(--font-b); }
 *:focus-visible { outline: 3px solid var(--color-secondary); outline-offset: 2px; border-radius: 4px; }
 
 /* ── Layout ── */
-.wrap { max-width: var(--mw); margin: 0 auto; padding: 0 28px; }
+.wrap { max-width: var(--mw); margin: 0 auto; padding: 0 clamp(28px, 4vw, 72px); }
 .sec { padding: 88px 0; }
 .sec--lt  { background: var(--color-bg-light); }
 .sec--dk  { background: var(--color-primary); color: var(--color-white); }
