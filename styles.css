@@ -640,3 +640,16 @@ details.faq summary:hover { background: var(--color-bg-light); }
   .v2-svc-grid { grid-template-columns: 1fr; }
   .v2-cta { padding: 64px 22px; }
 }
+
+@media (min-width: 1440px) {
+  .v2-bg {
+    background: #fff;
+    padding: 0;
+    min-height: 100vh;
+  }
+  .v2-sheet {
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
