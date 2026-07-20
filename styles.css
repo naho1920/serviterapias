@@ -115,7 +115,7 @@ button { font-family: var(--font-b); }
 /* ── Hero (split) ── */
 .page-hero {
   background: linear-gradient(140deg, #091f38 0%, var(--color-primary) 55%, #1a4d72 100%);
-  color: #fff; padding: 96px 0 72px; position: relative; overflow: hidden;
+  color: #fff; padding: clamp(96px, 10vh, 140px) 0 clamp(72px, 8vh, 110px); position: relative; overflow: hidden;
 }
 .page-hero::before {
   content: ''; position: absolute; top: -120px; right: -80px;
@@ -160,7 +160,7 @@ button { font-family: var(--font-b); }
 /* ── Inner Hero (simple) ── */
 .inner-hero {
   background: linear-gradient(140deg, #091f38 0%, var(--color-primary) 100%);
-  padding: 72px 0 60px; text-align: center; position: relative; overflow: hidden;
+  padding: clamp(72px, 9vh, 120px) 0 clamp(60px, 7vh, 100px); text-align: center; position: relative; overflow: hidden;
 }
 .inner-hero::before {
   content: ''; position: absolute; inset: 0;
@@ -493,7 +493,7 @@ details.faq summary:hover { background: var(--color-bg-light); }
 .v2-burger span { display: block; width: 20px; height: 2px; background: var(--color-primary); border-radius: 2px; }
 
 /* hero */
-.v2-hero { position: relative; margin: 4px clamp(14px, 2.5vw, 30px) 0; border-radius: 20px; overflow: hidden; min-height: clamp(580px, 70vh, 920px); display: flex; align-items: center; justify-content: center; text-align: center; padding: clamp(90px, 10vh, 140px) 26px clamp(110px, 12vh, 160px); }
+.v2-hero { position: relative; margin: 4px clamp(14px, 2.5vw, 30px) 0; border-radius: 20px; overflow: hidden; min-height: clamp(580px, 62vh, 820px); display: flex; align-items: center; justify-content: center; text-align: center; padding: clamp(90px, 10vh, 130px) 26px clamp(110px, 11vh, 150px); }
 .v2-hero-img { position: absolute; inset: 0; }
 .v2-hero-img img { width: 100%; height: 100%; object-fit: cover; animation: v2kb 24s ease-in-out infinite alternate; }
 .v2-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(9,31,56,.62) 0%, rgba(9,31,56,.3) 48%, rgba(9,31,56,.68) 100%); }
@@ -504,7 +504,7 @@ details.faq summary:hover { background: var(--color-bg-light); }
 .v2-hsub { font-size: 1.02rem; color: rgba(255,255,255,.84); max-width: 560px; line-height: 1.7; margin: 0; }
 .v2-hbtn { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--color-primary); font-weight: 700; font-size: .92rem; padding: 16px 34px; border-radius: 50px; transition: all var(--t); box-shadow: 0 10px 30px rgba(9,31,56,.3); }
 .v2-hbtn:hover { background: var(--color-secondary); color: #fff; transform: translateY(-2px); }
-.v2-hero--sm { min-height: clamp(420px, 52vh, 680px); padding: clamp(80px, 9vh, 120px) 26px clamp(70px, 8vh, 110px); }
+.v2-hero--sm { min-height: clamp(400px, 46vh, 600px); padding: clamp(80px, 8vh, 110px) 26px clamp(70px, 7vh, 100px); }
 .v2-hero--sm h1 { font-size: clamp(1.9rem, 4vw, 3.1rem); }
 .v2-hfoot { position: absolute; left: 26px; right: 26px; bottom: 20px; z-index: 2; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
 .v2-avrow { display: flex; align-items: center; gap: 12px; }
@@ -639,4 +639,49 @@ details.faq summary:hover { background: var(--color-bg-light); }
   .v2-steps { grid-template-columns: 1fr; }
   .v2-svc-grid { grid-template-columns: 1fr; }
   .v2-cta { padding: 64px 22px; }
+}
+
+/* ── Pantallas grandes (≥ 1440px) ── */
+@media (min-width: 1440px) {
+
+  /* 1. Espacio lateral proporcional en secciones interiores */
+  .wrap {
+    max-width: none;
+    padding: 0 clamp(72px, 7vw, 160px);
+  }
+  .sec { padding: clamp(88px, 8vh, 130px) 0; }
+
+  /* 2. Tipografía proporcional */
+  body { font-size: 1.06rem; }
+
+  .hero-h1,
+  .v2-hero h1 { font-size: clamp(3rem, 4.2vw, 4.8rem); }
+
+  .v2-hsub { font-size: 1.15rem; }
+
+  .sec-h { font-size: clamp(2.2rem, 3vw, 3.2rem); }
+
+  .feat-h,
+  .v2-h2t { font-size: clamp(1.9rem, 2.4vw, 2.8rem); }
+
+  .v2-lead { font-size: clamp(1.3rem, 1.6vw, 1.7rem); }
+
+  .v2-big { font-size: clamp(4rem, 4.5vw, 6rem); }
+
+  .v2-cd h3 { font-size: clamp(1.5rem, 1.8vw, 2rem); }
+
+  .svc-card h3 { font-size: 1.16rem; }
+  .svc-card p  { font-size: .94rem; }
+
+  .blog-h { font-size: 1.18rem; }
+
+  .inner-hero h1 { font-size: clamp(2.4rem, 3.5vw, 3.6rem); }
+  .inner-hero p  { font-size: 1.1rem; max-width: 680px; }
+
+  /* 3. Nav más generoso */
+  .v2-nav { padding-top: 26px; padding-bottom: 22px; }
+  .v2-pad {
+    padding-left: clamp(72px, 7vw, 160px);
+    padding-right: clamp(72px, 7vw, 160px);
+  }
 }
